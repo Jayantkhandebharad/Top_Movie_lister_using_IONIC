@@ -2,7 +2,10 @@
 this is simple movie listing application for learning basic API calling and designing using IONIC with angular framework... created for fun...!
 
 ## To run application 
-`npm install'
+`npm install`
+
+then 
+
 `ionic serve`
 
 ### Home page
