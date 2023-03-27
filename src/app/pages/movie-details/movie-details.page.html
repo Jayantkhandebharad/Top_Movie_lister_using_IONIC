@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="success">
+    
+    <ion-title> {{movie?.title}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHerf="/movies" ></ion-back-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="'http://image.tmdb.org/t/p/w400'+movie?.poster_path" class="movie-image"/>
+    
+    <ion-card-header>
+      <ion-card-title>
+        {{movie?.title}}
+      </ion-card-title>
+      <ion-card-subtitle>
+        {{movie?.tagline}}
+      </ion-card-subtitle>
+      <ion-text color="tertiary">
+        <span *ngFor="let g of movie?.genres; let isLast=last">
+          {{g.name}} {{!isLast?' . ':''}}
+        </span>
+      </ion-text>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
